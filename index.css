@@ -1,0 +1,277 @@
+:root {
+  /* color */
+  --color-white: rgb(248, 248, 248);
+  --color-white-blur: rgba(248, 248, 248, 0.568);
+  --color-gray-blur: rgba(95, 95, 95, 0.582);
+  --color-dark-gray: rgb(68, 68, 68);
+  --color-black: rgb(14, 14, 14);
+
+  /* Font size */
+
+  --font-largest: 72px;
+  --font-large: 42px;
+  --font-medium: 28px;
+  --font-regular: 22px;
+  --font-small: 16px;
+  --font-micro: 14px;
+
+  /* Font weight */
+
+  --weight-bold: 700;
+  --weight-semi-bold: 600;
+  --weight-regular: 400;
+
+  /* Size */
+  --size-border-radius: 4px;
+
+  /* Animation */
+  --animation-duration: 300ms;
+}
+
+/* font */
+@font-face {
+  font-family: 'Cafe24Dangdanghae';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.2/Cafe24Dangdanghae.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Wemakeprice-Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/Wemakeprice-Bold.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NEXON Lv1 Gothic OTF';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NanumBarunGothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
+  src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix')
+      format('embedded-opentype'),
+    url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff')
+      format('woff'),
+    url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf')
+      format('truetype');
+}
+
+@font-face {
+  font-family: 'NanumBarunGothic';
+  font-style: normal;
+  font-weight: 700;
+  src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot');
+  src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot?#iefix')
+      format('embedded-opentype'),
+    url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff')
+      format('woff'),
+    url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.ttf')
+      format('truetype');
+}
+
+@font-face {
+  font-family: 'NanumBarunGothic';
+  font-style: normal;
+  font-weight: 300;
+  src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot');
+  src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix')
+      format('embedded-opentype'),
+    url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff')
+      format('woff'),
+    url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf')
+      format('truetype');
+}
+
+@font-face {
+  font-family: 'Chosunilbo_myungjo';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.nanumbarungothic * {
+  font-family: 'NanumBarunGothic', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Chosunilbo_myungjo;
+  background: rgb(64, 64, 64);
+  background: linear-gradient(
+    32deg,
+    rgba(64, 64, 64, 1) 0%,
+    rgba(100, 100, 163, 1) 59%,
+    rgba(207, 171, 221, 1) 100%
+  );
+  color: var(--color-white);
+}
+
+ul {
+  list-style: none;
+}
+
+/* Header */
+
+.loginJoin__wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin: 5px 15px;
+}
+.loginJoin {
+  padding: 0 10px;
+  font-family: NanumBarunGothic;
+}
+
+.title {
+  height: 35vh;
+  line-height: 35vh;
+  font-family: 'Chosunilbo_myungjo';
+  text-align: center;
+  font-size: var(--font-largest);
+  /* margin: 50px 0px; */
+}
+
+/* Navbar */
+.menu__wrapper {
+  margin-bottom: 60px;
+}
+.menus {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  font-family: Chosunilbo_myungjo;
+}
+.menu {
+  padding: 5px 10px;
+  font-size: var(--font-medium);
+}
+
+.menu.selected {
+  background-color: var(--color-gray-blur);
+}
+
+/* Main */
+main {
+  width: 80vw;
+  margin: auto;
+  padding: 10px 50px;
+  background-color: var(--color-white-blur);
+  color: var(--color-dark-gray);
+  border-radius: 15px;
+}
+
+/* All Day */
+.day__wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 70px 0;
+}
+.dayInfo {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+}
+.date-wrapper {
+  display: flex;
+  font-size: var(--font-medium);
+  margin-bottom: 10px;
+}
+.weather-wrapper {
+  display: flex;
+  font-size: var(--font-regular);
+}
+.date-wrapper div,
+.weather-wrapper div {
+  padding-right: 15px;
+}
+.day-location {
+}
+.day-temperature {
+}
+.day-weather {
+}
+
+.clothesExample {
+  font-family: NanumBarunGothic;
+  margin: 5px 0;
+}
+.dayClothes__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.dayClothes {
+  width: 300px;
+  height: 400px;
+}
+.dayClothes img {
+  width: 300px;
+  height: 400px;
+}
+
+/* today */
+
+.today__wrapper {
+}
+.todayInfo {
+}
+.today-location {
+}
+.today-temperature {
+}
+.today-weather {
+}
+.todayClothes__wrapper {
+}
+.todayClothes {
+}
+
+/* tomorrow */
+
+.tomorrow__wrapper {
+}
+.tomorrowInfo {
+}
+.tomorrow-location {
+}
+.tomorrow-temperature {
+}
+.tomorrow-weather {
+}
+.tomorrowClothes__wrapper {
+}
+.tomorrowClothes {
+}
+
+/* The Day After Tomorrow */
+
+.theDayAfterTomorrow__wrapper {
+}
+.theDayAfterTomorrowInfo {
+}
+.theDayAfterTomorrow-location {
+}
+.theDayAfterTomorrow-temperature {
+}
+.theDayAfterTomorrow-weather {
+}
+.theDayAfterTomorrowClothes__wrapper {
+}
+.theDayAfterTomorrowClothes {
+}
+
+/* footer */
+footer {
+  height: 30vh;
+}
