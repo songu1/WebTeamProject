@@ -129,6 +129,11 @@ a {
   color: var(--color-white);
 }
 
+button {
+  cursor: pointer;
+  border: none;
+  font-family: Chosunilbo_myungjo;
+}
 /* Header */
 
 .header__loginJoin-wrapper {
@@ -170,6 +175,22 @@ a {
   background-color: var(--color-gray-blur);
 }
 
+/* Write Button */
+
+.section__write-ootd {
+  display: flex;
+  justify-content: flex-end;
+  width: var(--main-section-width);
+  margin: 30px auto;
+}
+.write-ootd-button {
+  font-size: var(--font-regular);
+  border-radius: var(--size-border-radius);
+  background-color: var(--color-gray-blur);
+  color: var(--color-white);
+  padding: 5px;
+}
+
 /* Main */
 main {
   width: var(--main-section-width);
@@ -180,107 +201,54 @@ main {
   border-radius: 15px;
 }
 
-/* All Day */
-.main__day-wrapper {
+.main__ootd-section {
   display: flex;
   flex-direction: column;
-  margin: 70px 0;
-}
-.main__dayInfo {
-  display: flex;
-  flex-direction: column;
-  margin: 15px 0;
-}
-.main__date-wrapper {
-  display: flex;
-  font-size: var(--font-medium);
-  margin-bottom: 10px;
-}
-.main__weather-wrapper {
-  display: flex;
-  font-size: var(--font-regular);
-}
-.main__date-wrapper div,
-.main__weather-wrapper div {
-  padding-right: 15px;
-}
-.main__day-location {
-}
-.main__day-temperature {
-}
-.main__day-weather {
+  justify-content: center;
+  align-items: center;
 }
 
-.main__clothesExample {
-  font-family: NanumBarunGothic;
-  margin: 5px 0;
+.main__ootd-title {
+  font-size: var(--font-large);
+  text-align: center;
+  margin: 30px 0;
 }
-.main__dayClothes-wrapper {
-  /* display: flex;
-  justify-content: space-between; */
+
+.main__ootd-contents {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   row-gap: 20px;
   column-gap: 50px;
-}
-.main__dayClothes {
-  width: 300px;
-  height: 400px;
-}
-.main__dayClothes img {
-  width: 300px;
-  height: 400px;
+  /* display: flex;
+  flex-wrap: wrap;
+  justify-content: center; */
 }
 
-/* today */
-
-.main__today-wrapper {
+.main__ootd-content {
+  position: relative;
+  width: 280px;
+  height: 380px;
 }
-.main__todayInfo {
-}
-.main__today-location {
-}
-.main__today-temperature {
-}
-.main__today-weather {
-}
-.main__todayClothes-wrapper {
-}
-.main__todayClothes {
+.main__ootd-content img {
+  width: 100%;
+  height: 100%;
 }
 
-/* tomorrow */
-
-.main__tomorrow-wrapper {
+.main__ootd-content-description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-gray-blur);
+  color: var(--color-white);
+  transition: all 300ms ease-in;
+  opacity: 0;
+  line-height: 380px;
+  text-align: center;
 }
-.main__tomorrowInfo {
-}
-.main__tomorrow-location {
-}
-.main__tomorrow-temperature {
-}
-.main__tomorrow-weather {
-}
-.main__tomorrowClothes-wrapper {
-}
-.main__tomorrowClothes {
-}
-
-/* The Day After Tomorrow */
-
-.main__theDayAfterTomorrow-wrapper {
-}
-.main__theDayAfterTomorrowInfo {
-}
-.main__theDayAfterTomorrow-location {
-}
-.main__theDayAfterTomorrow-temperature {
-}
-.main__theDayAfterTomorrow-weather {
-}
-.main__theDayAfterTomorrowClothes-wrapper {
-}
-.main__theDayAfterTomorrowClothes {
+.main__ootd-content:hover .main__ootd-content-description {
+  opacity: 0.8;
 }
 
 /* footer */
