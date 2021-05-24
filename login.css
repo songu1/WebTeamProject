@@ -148,10 +148,15 @@ textarea {
   margin: 5px 15px;
 }
 .header__loginJoin {
-  padding: 0 10px;
+  padding: 10px 10px;
   font-family: NanumBarunGothic;
+  border: 1px solid var(--color-white);
 }
 
+.header__login:hover,
+.header__join:hover {
+  border: 1px solid var(--color-black);
+}
 .header__title {
   height: 35vh;
   line-height: 35vh;
@@ -202,8 +207,14 @@ main {
 .form-group .btn {
   border: 1px solid var(--color-black);
   background-color: var(--color-white-blur);
-  width: 60px;
-  height: 30px;
+  padding: 5px 10px;
+  margin: 20px;
+}
+.form-group .btn:hover {
+  border: 1px solid var(--color-black);
+  background-color: var(--color-dark-gray);
+  color: var(--color-white);
+  padding: 5px 10px;
   margin: 20px;
 }
 
