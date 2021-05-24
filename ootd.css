@@ -5,6 +5,7 @@
   --color-gray-blur: rgba(95, 95, 95, 0.582);
   --color-dark-gray: rgb(68, 68, 68);
   --color-black: rgb(14, 14, 14);
+  --color-beige: rgb(216, 203, 196);
 
   /* Font size */
 
@@ -110,14 +111,15 @@
 
 body {
   font-family: Chosunilbo_myungjo;
-  background: rgb(64, 64, 64);
+  background-color: var(--color-white);
+  /* background: rgb(64, 64, 64);
   background: linear-gradient(
     32deg,
     rgba(64, 64, 64, 1) 0%,
     rgba(100, 100, 163, 1) 59%,
     rgba(207, 171, 221, 1) 100%
-  );
-  color: var(--color-white);
+  ); */
+  color: var(--color-black);
 }
 
 ul {
@@ -126,7 +128,7 @@ ul {
 
 a {
   text-decoration: none;
-  color: var(--color-white);
+  color: var(--color-black);
 }
 
 button {
@@ -175,6 +177,10 @@ button {
   background-color: var(--color-gray-blur);
 }
 
+.nav__menu.selected a {
+  color: var(--color-white);
+}
+
 /* Write Button */
 
 .section__write-ootd {
@@ -196,9 +202,9 @@ main {
   width: var(--main-section-width);
   margin: auto;
   padding: 10px 50px;
-  background-color: var(--color-white-blur);
+  background-color: var(--color-gray-blur);
   color: var(--color-dark-gray);
-  border-radius: 15px;
+  border-radius: 3px;
 }
 
 .main__ootd-section {
@@ -254,4 +260,7 @@ main {
 /* footer */
 footer {
   height: 30vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
 }

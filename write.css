@@ -112,12 +112,12 @@ body {
   font-family: Chosunilbo_myungjo;
   background-color: var(--color-white);
   /* background: rgb(64, 64, 64);
-  background: linear-gradient(
-    32deg,
-    rgba(64, 64, 64, 1) 0%,
-    rgba(100, 100, 163, 1) 59%,
-    rgba(207, 171, 221, 1) 100%
-  ); */
+    background: linear-gradient(
+      32deg,
+      rgba(64, 64, 64, 1) 0%,
+      rgba(100, 100, 163, 1) 59%,
+      rgba(207, 171, 221, 1) 100%
+    ); */
   color: var(--color-black);
 }
 
@@ -128,6 +128,16 @@ ul {
 a {
   text-decoration: none;
   color: var(--color-black);
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+textarea {
+  outline: none;
+  border: none;
 }
 
 /* Header */
@@ -151,30 +161,6 @@ a {
   /* margin: 50px 0px; */
 }
 
-/* Navbar */
-.nav__menu-wrapper {
-  margin-bottom: 60px;
-}
-.nav__menus {
-  display: flex;
-  justify-content: center;
-  padding: 0;
-  margin: 0;
-  font-family: Chosunilbo_myungjo;
-}
-.nav__menu {
-  padding: 5px 10px;
-  font-size: var(--font-medium);
-}
-
-.nav__menu.selected {
-  background-color: var(--color-gray-blur);
-}
-
-.nav__menu.selected a {
-  color: var(--color-white);
-}
-
 /* Main */
 main {
   width: var(--main-section-width);
@@ -185,107 +171,54 @@ main {
   border-radius: 3px;
 }
 
-/* All Day */
-.main__day-wrapper {
+.main__write-section {
   display: flex;
   flex-direction: column;
-  margin: 70px 0;
+  justify-content: center;
+  align-items: center;
 }
-.main__dayInfo {
+
+.main__section-title {
+  font-size: var(--font-large);
+  margin: 15px;
+}
+.main__write-wrapper {
+  width: 50vw;
+}
+
+.main__write-title label,
+.main__write-title input {
+  height: 40px;
+  margin: 5px;
+}
+
+.main__write-image {
+}
+
+.main__write-image label,
+.main__write-image input {
+  height: 40px;
+  margin: 5px;
+}
+.main__write-text {
   display: flex;
-  flex-direction: column;
-  margin: 15px 0;
-}
-.main__date-wrapper {
-  display: flex;
-  font-size: var(--font-medium);
-  margin-bottom: 10px;
-}
-.main__weather-wrapper {
-  display: flex;
-  font-size: var(--font-regular);
-}
-.main__date-wrapper div,
-.main__weather-wrapper div {
-  padding-right: 15px;
-}
-.main__day-location {
-}
-.main__day-temperature {
-}
-.main__day-weather {
+  align-items: flex-start;
 }
 
-.main__clothesExample {
-  font-family: NanumBarunGothic;
-  margin: 5px 0;
+.main__write-text label,
+.main__write-text textarea {
+  margin: 5px;
 }
-.main__dayClothes-wrapper {
-  /* display: flex;
-  justify-content: space-between; */
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  row-gap: 20px;
-  column-gap: 50px;
-}
-.main__dayClothes {
-  width: 300px;
-  height: 400px;
-}
-.main__dayClothes img {
-  width: 300px;
-  height: 400px;
+.main__write-uploadBtn .btn {
+  border: 1px solid var(--color-black);
+  background-color: var(--color-white-blur);
+  width: 60px;
+  height: 30px;
+  margin: 20px;
 }
 
-/* today */
-
-.main__today-wrapper {
-}
-.main__todayInfo {
-}
-.main__today-location {
-}
-.main__today-temperature {
-}
-.main__today-weather {
-}
-.main__todayClothes-wrapper {
-}
-.main__todayClothes {
-}
-
-/* tomorrow */
-
-.main__tomorrow-wrapper {
-}
-.main__tomorrowInfo {
-}
-.main__tomorrow-location {
-}
-.main__tomorrow-temperature {
-}
-.main__tomorrow-weather {
-}
-.main__tomorrowClothes-wrapper {
-}
-.main__tomorrowClothes {
-}
-
-/* The Day After Tomorrow */
-
-.main__theDayAfterTomorrow-wrapper {
-}
-.main__theDayAfterTomorrowInfo {
-}
-.main__theDayAfterTomorrow-location {
-}
-.main__theDayAfterTomorrow-temperature {
-}
-.main__theDayAfterTomorrow-weather {
-}
-.main__theDayAfterTomorrowClothes-wrapper {
-}
-.main__theDayAfterTomorrowClothes {
+.form-control {
+  width: 45vw;
 }
 
 /* footer */
