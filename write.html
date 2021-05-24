@@ -19,8 +19,8 @@
     <main>
       <section class="main__write-section">
         <div class="main__section-title">글쓰기</div>
-        <div class="main__write-wrapper">
-          <div class="main__write-title">
+        <form action="" method="POST">
+          <div class="form-group">
             <label>제목</label>
             <input
               type="text"
@@ -30,11 +30,11 @@
               name="title"
             />
           </div>
-          <div class="main__write-image">
+          <div class="form-group">
             <label>사진</label>
             <input type="file" class="form-control" id="image" name="image" />
           </div>
-          <div class="main__write-text">
+          <div class="form-group textarea-wrapper">
             <label>본문</label>
             <textarea
               rows="5"
@@ -43,12 +43,16 @@
               name="body"
             ></textarea>
           </div>
-        </div>
-        <div class="main__write-uploadBtn">
-          <button type="submit" class="btn btn-primary" id="sendMessageButton">
-            보내기
-          </button>
-        </div>
+          <div class="form-group btn">
+            <button
+              type="submit"
+              class="btn btn-primary"
+              id="sendMessageButton"
+            >
+              보내기
+            </button>
+          </div>
+        </form>
       </section>
     </main>
     <footer>
