@@ -1,29 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/9e91bdc3ca.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="register.css" />
-    <title>오늘 뭐 입지?</title>
+    <link rel="stylesheet" href="/css/register.css" />
+    <%- include('layouts/head'); -%>
   </head>
   <body>
-    <header>
-      <div class="header__loginJoin-wrapper">
-        <div class="header__login header__loginJoin">
-          <a href="./login.html">로그인</a>
-        </div>
-        <div class="header__loginJoin">|</div>
-        <div class="header__join header__loginJoin">
-          <a href="./register.html">회원가입</a>
-        </div>
-      </div>
-      <div class="header__title"><a href="./index.html">오늘 뭐 입지?</a></div>
-    </header>
+    <%- include('layouts/header'); -%>
     <main>
       <section class="main__register-section">
         <div class="main__section-title">회원가입</div>
@@ -77,14 +59,6 @@
         </form>
       </section>
     </main>
-    <footer>
-      <p>
-        &copy; 2021-오늘 뭐 입지?, Inc. &middot;
-        <a href="#">Privacy</a> &middot; <a href="#">Terms</a>
-      </p>
-      <p class="float-end">
-        <a href="#"><i class="fas fa-arrow-alt-circle-up"></i></a>
-      </p>
-    </footer>
+    <%- include('layouts/footer'); -%>
   </body>
 </html>
