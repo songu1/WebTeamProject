@@ -1,0 +1,332 @@
+:root {
+  /* color */
+  --color-white: rgb(248, 248, 248);
+  --color-white-blur: rgba(248, 248, 248, 0.568);
+  --color-gray-blur: rgba(95, 95, 95, 0.582);
+  --color-dark-gray: rgb(68, 68, 68);
+  --color-black: rgb(14, 14, 14);
+
+  /* Font size */
+
+  --font-largest: 72px;
+  --font-large: 42px;
+  --font-medium: 28px;
+  --font-regular: 22px;
+  --font-small: 16px;
+  --font-micro: 14px;
+
+  /* Font weight */
+
+  --weight-bold: 700;
+  --weight-semi-bold: 600;
+  --weight-regular: 400;
+
+  /* Size */
+  --size-border-radius: 4px;
+
+  /* Animation */
+  --animation-duration: 300ms;
+
+  /* width */
+  --main-section-width: 80vw;
+}
+
+/* font */
+@font-face {
+  font-family: 'Cafe24Dangdanghae';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.2/Cafe24Dangdanghae.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Wemakeprice-Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/Wemakeprice-Bold.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NEXON Lv1 Gothic OTF';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NanumBarunGothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
+  src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix')
+      format('embedded-opentype'),
+    url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff')
+      format('woff'),
+    url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf')
+      format('truetype');
+}
+
+@font-face {
+  font-family: 'NanumBarunGothic';
+  font-style: normal;
+  font-weight: 700;
+  src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot');
+  src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot?#iefix')
+      format('embedded-opentype'),
+    url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff')
+      format('woff'),
+    url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.ttf')
+      format('truetype');
+}
+
+@font-face {
+  font-family: 'NanumBarunGothic';
+  font-style: normal;
+  font-weight: 300;
+  src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot');
+  src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix')
+      format('embedded-opentype'),
+    url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff')
+      format('woff'),
+    url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf')
+      format('truetype');
+}
+
+@font-face {
+  font-family: 'Chosunilbo_myungjo';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.nanumbarungothic * {
+  font-family: 'NanumBarunGothic', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Chosunilbo_myungjo;
+  background-color: var(--color-white);
+  /* background: rgb(64, 64, 64);
+    background: linear-gradient(
+      32deg,
+      rgba(64, 64, 64, 1) 0%,
+      rgba(100, 100, 163, 1) 59%,
+      rgba(207, 171, 221, 1) 100%
+    ); */
+  color: var(--color-black);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-black);
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+textarea {
+  outline: none;
+  border: none;
+}
+
+/* Header */
+
+.header__loginJoin-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin: 5px 15px;
+}
+.header__loginJoin {
+  padding: 10px 10px;
+  font-family: NanumBarunGothic;
+  border: 1px solid var(--color-white);
+}
+
+.header__login:hover,
+.header__join:hover {
+  border: 1px solid var(--color-black);
+}
+.header__title {
+  height: 35vh;
+  line-height: 35vh;
+  font-family: 'Chosunilbo_myungjo';
+  text-align: center;
+  font-size: var(--font-largest);
+  /* margin: 50px 0px; */
+}
+
+/* Main */
+main {
+  width: var(--main-section-width);
+  margin: auto;
+  padding: 10px 50px;
+  background-color: var(--color-white-blur);
+  color: var(--color-dark-gray);
+  border-radius: 3px;
+}
+.main__write-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__section-title {
+  font-size: var(--font-large);
+  margin: 30px;
+}
+
+.form-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-group label,
+.form-group input {
+  height: 40px;
+  margin: 5px;
+  line-height: 40px;
+}
+
+.form-group textarea {
+  margin: 5px;
+}
+
+.form-group.btn {
+  justify-content: center;
+}
+
+.form-group .btn {
+  border: 1px solid var(--color-black);
+  background-color: var(--color-white-blur);
+  padding: 5px 10px;
+  margin: 20px;
+}
+.form-group .btn:hover {
+  border: 1px solid var(--color-black);
+  background-color: var(--color-dark-gray);
+  color: var(--color-white);
+  padding: 5px 10px;
+  margin: 20px;
+}
+
+.form-control {
+  width: 40vw;
+}
+
+/* footer */
+footer {
+  height: 30vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+/* @@@ Mobile @@@ */
+
+@media screen and (max-width: 850px) {
+  /* Header */
+
+  body {
+    margin: 0;
+  }
+
+  header {
+    width: 100vw;
+  }
+
+  .header__title {
+    height: 25vh;
+    line-height: 25vh;
+    font-size: var(--font-large);
+    /* margin: 50px 0px; */
+  }
+
+  /* Navbar */
+  .nav__menu-wrapper {
+    margin-bottom: 30px;
+  }
+
+  .nav__menu {
+    font-size: var(--font-regular);
+  }
+
+  /* Main */
+  main {
+    width: 100vw;
+    margin: auto;
+    padding: 0;
+  }
+
+  .main__write-section {
+    width: 100vw;
+  }
+
+  .main__write-section {
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main__section-title {
+    font-size: var(--font-medium);
+    margin: 30px;
+  }
+
+  .control-group {
+    width: 85vw;
+    margin: auto;
+  }
+
+  .form-group {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .form-group label,
+  .form-group input {
+    height: 40px;
+    margin: 5px;
+    line-height: 40px;
+  }
+
+  .form-group input {
+    width: 60vw;
+  }
+
+  .form-group textarea {
+    width: 60vw;
+  }
+
+  /* footer */
+  footer {
+    height: 15vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  footer p {
+    font-size: var(--font-micro);
+    padding: 5px;
+  }
+  .float-end {
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    margin: 5px;
+    font-size: var(--font-large);
+  }
+}
