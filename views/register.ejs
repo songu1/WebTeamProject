@@ -9,7 +9,11 @@
     <main>
       <section class="main__register-section">
         <div class="main__section-title">회원가입</div>
-        <form action="" method="POST" class="main__register-wrapper">
+        <form
+          action="/register/newUser"
+          method="POST"
+          class="main__register-wrapper"
+        >
           <div class="control-group">
             <div class="form-group">
               <label>ID</label>
@@ -17,8 +21,8 @@
                 type="text"
                 class="form-control"
                 placeholder="ID를 입력하세요"
-                id="username"
-                name="username"
+                id="userId"
+                name="userId"
               />
             </div>
           </div>
@@ -41,8 +45,8 @@
                 type="password"
                 class="form-control"
                 placeholder="비밀번호 한 번 더 입력하세요"
-                id="password"
-                name="password"
+                id="passwordCheck"
+                name="passwordCheck"
               />
             </div>
           </div>
