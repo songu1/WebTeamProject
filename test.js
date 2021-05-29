@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const User = require('./models/User');
-
+const Clothes = require('./models/Clothes');
 mongoose.connect('mongodb://localhost/my_database', { useNewUrlParser: true });
 
 const id = '60afa5cd4d35123430d46559';
@@ -14,12 +14,16 @@ const id = '60afa5cd4d35123430d46559';
 //   }
 // );
 
-User.findByIdAndUpdate(
-  id,
-  {
-    userId: '김지민1 업데이트',
-  },
-  (err, user) => {
-    console.log(err, user);
-  }
-);
+// User.findByIdAndUpdate(
+//   id,
+//   {
+//     userId: '김지민1 업데이트',
+//   },
+//   (err, user) => {
+//     console.log(err, user);
+//   }
+// );
+
+Clothes.find({}, (err, clothes) => {
+  console.log(err, clothes);
+});

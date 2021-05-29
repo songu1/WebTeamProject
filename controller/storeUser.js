@@ -1,9 +1,10 @@
-const User = require('./User');
+const User = require('../models/User');
+const path = require('path');
 
 module.exports = (req, res) => {
   User.create(req.body, (err, user) => {
     if (err) {
-      return res.redirect('/auth/register');
+      return res.redirect('/register');
     }
     res.redirect('/');
   });
