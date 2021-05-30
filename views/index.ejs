@@ -1,32 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="index.css" />
-    <title>오늘 뭐 입지?</title>
+    <link rel="stylesheet" href="/css/index.css" />
+    <%- include('layouts/head'); -%>
   </head>
+
   <body>
-    <header>
-      <div class="header__loginJoin-wrapper">
-        <div class="header__login header__loginJoin">로그인</div>
-        <div class="header__loginJoin">|</div>
-        <div class="header__join header__loginJoin">회원가입</div>
-      </div>
-      <div class="header__title">오늘 뭐 입지?</div>
-    </header>
-    <nav>
-      <div class="nav__menu-wrapper">
-        <ul class="nav__menus">
-          <li class="nav__menu menuBorder selected">
-            <a href="./index.html">오늘의 날씨</a>
-          </li>
-          <li class="nav__menu">|</li>
-          <li class="nav__menu menuBorder"><a href="./ootd.html">OOTD</a></li>
-        </ul>
-      </div>
-    </nav>
+    <%- include('layouts/header'); -%> <%- include('layouts/navbar'); -%>
     <main>
       <section class="main__weather-section">
         <div class="main__today-wrapper main__day-wrapper">
@@ -48,10 +28,7 @@
           </div>
           <div class="main__todayClothes-wrapper main__dayClothes-wrapper">
             <div class="main__todayClothes main__dayClothes clothes1">
-              <img
-                src="https://image.msscdn.net/images/goods_img/20190327/996177/996177_3_500.jpg"
-                alt=""
-              />
+              <img src="<%= clothes[0].url %>" alt="" />
             </div>
             <div class="main__todayClothes main__dayClothes clothes2">
               <img
@@ -171,5 +148,6 @@
     </main>
     <footer></footer>
     <script type="text/javascript" src="index.js"></script>
+    <%- include('layouts/footer'); -%>
   </body>
 </html>

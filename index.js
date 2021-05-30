@@ -1,41 +1,50 @@
-const APIKEY = "2bfdff62d10ac09bcbd6648dcb41e523";
+const express = require("express");
+const path = require("path");
+const mongoose = require("mongoose");
+const User = require("./models/User.js");
+const Clothes = require("./models/Clothes.js");
+const newUserController = require("./controller/newUser");
+const loginUserController = require("./controller/loginUser");
 
-const getWeather = () => {
-  fetch(APICALL)
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (myJson) {
-      console.log(JSON.stringify(myJson));
-    });
-};
+mongoose.connect("mongodb://localhost/my_database", { useNewUrlParser: true });
 
-const getLocation = () => {
-  navigator.geolocation.getCurrentPosition((position) => {
-    const lat = position.coords.latitude;
-    const lon = position.coords.longitude;
-    const APICALL = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=metric&appid=${APIKEY}&lang=kr&exclude=minutely,hourly,alerts`;
-    // http://api.openweathermap.org/geo/1.0/reverse?${lat}&lon=${lon}&limit=5&appid=${APIKEY}
-    const GEOAPICALL = `http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=1&appid=${APIKEY}`;
-    fetch(GEOAPICALL)
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (myJson) {
-        console.log(myJson);
-      });
-    fetch(APICALL)
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (myJson) {
-        console.log(myJson);
-      });
+const app = new express();
+const ejs = require("ejs");
+const loginUser = require("./controller/loginUser");
+app.set("view engine", "ejs");
+
+app.use(express.static("public"));
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+app.listen(4000, () => {
+  console.log(`App listeing on port 4000`);
+});
+
+app.get("/", async (req, res) => {
+  const clothes = await Clothes.find({});
+  res.render("index", {
+    clothes,
   });
-};
+});
 
-function init() {
-  getLocation();
-}
+app.get("/login", (req, res) => {
+  res.render("login");
+});
 
-init();
+app.get("/ootd", (req, res) => {
+  res.render("ootd");
+});
+app.get("/register", (req, res) => {
+  res.render("register");
+});
+app.get("/write", (req, res) => {
+  res.render("write");
+});
+
+app.post("/register/newUser", async (req, res) => {
+  await User.create(req.body);
+  res.redirect("/");
+});
+
+app.post("/user/login", loginUserController);

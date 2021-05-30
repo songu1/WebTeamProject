@@ -110,14 +110,15 @@
 
 body {
   font-family: Chosunilbo_myungjo;
-  background: rgb(64, 64, 64);
+  background-color: var(--color-white);
+  /* background: rgb(64, 64, 64);
   background: linear-gradient(
     32deg,
     rgba(64, 64, 64, 1) 0%,
     rgba(100, 100, 163, 1) 59%,
     rgba(207, 171, 221, 1) 100%
-  );
-  color: var(--color-white);
+  ); */
+  color: var(--color-black);
 }
 
 ul {
@@ -126,14 +127,9 @@ ul {
 
 a {
   text-decoration: none;
-  color: var(--color-white);
+  color: var(--color-black);
 }
 
-button {
-  cursor: pointer;
-  border: none;
-  font-family: Chosunilbo_myungjo;
-}
 /* Header */
 
 .header__loginJoin-wrapper {
@@ -142,8 +138,14 @@ button {
   margin: 5px 15px;
 }
 .header__loginJoin {
-  padding: 0 10px;
+  padding: 10px 10px;
   font-family: NanumBarunGothic;
+  border: 1px solid var(--color-white);
+}
+
+.header__login:hover,
+.header__join:hover {
+  border: 1px solid var(--color-black);
 }
 
 .header__title {
@@ -175,20 +177,8 @@ button {
   background-color: var(--color-gray-blur);
 }
 
-/* Write Button */
-
-.section__write-ootd {
-  display: flex;
-  justify-content: flex-end;
-  width: var(--main-section-width);
-  margin: 30px auto;
-}
-.write-ootd-button {
-  font-size: var(--font-regular);
-  border-radius: var(--size-border-radius);
-  background-color: var(--color-gray-blur);
+.nav__menu.selected a {
   color: var(--color-white);
-  padding: 5px;
 }
 
 /* Main */
@@ -198,60 +188,227 @@ main {
   padding: 10px 50px;
   background-color: var(--color-white-blur);
   color: var(--color-dark-gray);
-  border-radius: 15px;
+  border-radius: 3px;
 }
 
-.main__ootd-section {
+/* All Day */
+.main__day-wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  margin: 70px 0;
+}
+.main__dayInfo {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+}
+.main__date-wrapper {
+  display: flex;
+  font-size: var(--font-medium);
+  margin-bottom: 10px;
+}
+.main__weather-wrapper {
+  display: flex;
+  font-size: var(--font-regular);
+}
+.main__date-wrapper div,
+.main__weather-wrapper div {
+  padding-right: 15px;
+}
+.main__day-location {
+}
+.main__day-temperature {
+}
+.main__day-weather {
 }
 
-.main__ootd-title {
-  font-size: var(--font-large);
-  text-align: center;
-  margin: 30px 0;
+.main__clothesExample {
+  font-family: NanumBarunGothic;
+  margin: 5px 0;
 }
-
-.main__ootd-contents {
+.main__dayClothes-wrapper {
+  /* display: flex;
+  justify-content: space-between; */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   row-gap: 20px;
   column-gap: 50px;
-  /* display: flex;
-  flex-wrap: wrap;
-  justify-content: center; */
+}
+.main__dayClothes {
+  width: 300px;
+  height: 400px;
+}
+.main__dayClothes img {
+  width: 300px;
+  height: 400px;
 }
 
-.main__ootd-content {
-  position: relative;
-  width: 280px;
-  height: 380px;
+/* today */
+
+.main__today-wrapper {
 }
-.main__ootd-content img {
-  width: 100%;
-  height: 100%;
+.main__todayInfo {
+}
+.main__today-location {
+}
+.main__today-temperature {
+}
+.main__today-weather {
+}
+.main__todayClothes-wrapper {
+}
+.main__todayClothes {
 }
 
-.main__ootd-content-description {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--color-gray-blur);
-  color: var(--color-white);
-  transition: all 300ms ease-in;
-  opacity: 0;
-  line-height: 380px;
-  text-align: center;
+/* tomorrow */
+
+.main__tomorrow-wrapper {
 }
-.main__ootd-content:hover .main__ootd-content-description {
-  opacity: 0.8;
+.main__tomorrowInfo {
+}
+.main__tomorrow-location {
+}
+.main__tomorrow-temperature {
+}
+.main__tomorrow-weather {
+}
+.main__tomorrowClothes-wrapper {
+}
+.main__tomorrowClothes {
+}
+
+/* The Day After Tomorrow */
+
+.main__theDayAfterTomorrow-wrapper {
+}
+.main__theDayAfterTomorrowInfo {
+}
+.main__theDayAfterTomorrow-location {
+}
+.main__theDayAfterTomorrow-temperature {
+}
+.main__theDayAfterTomorrow-weather {
+}
+.main__theDayAfterTomorrowClothes-wrapper {
+}
+.main__theDayAfterTomorrowClothes {
 }
 
 /* footer */
 footer {
   height: 30vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+/* @@@ Mobile @@@ */
+
+@media screen and (max-width: 1200px) {
+  /* Header */
+
+  body {
+    margin: 0;
+  }
+
+  header {
+    width: 100vw;
+  }
+
+  .header__title {
+    height: 25vh;
+    line-height: 25vh;
+    font-size: var(--font-large);
+    /* margin: 50px 0px; */
+  }
+
+  /* Navbar */
+  .nav__menu-wrapper {
+    margin-bottom: 30px;
+  }
+
+  .nav__menu {
+    font-size: var(--font-regular);
+  }
+
+  /* Main */
+  main {
+    width: var(--main-section-width);
+    padding: 0;
+    margin: auto;
+    background-color: var(--color-white-blur);
+    color: var(--color-dark-gray);
+    border-radius: 3px;
+  }
+
+  /* All Day */
+  .main__day-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 70px 0;
+  }
+  .main__dayInfo {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+  }
+  .main__date-wrapper {
+    display: flex;
+    font-size: var(--font-medium);
+    margin-bottom: 10px;
+  }
+  .main__weather-wrapper {
+    display: flex;
+    font-size: var(--font-regular);
+  }
+  .main__date-wrapper div,
+  .main__weather-wrapper div {
+    padding-right: 15px;
+  }
+  .main__day-location {
+  }
+  .main__day-temperature {
+  }
+  .main__day-weather {
+  }
+
+  .main__clothesExample {
+    font-family: NanumBarunGothic;
+    margin: 5px 0;
+  }
+  .main__dayClothes-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 20px;
+    column-gap: 50px;
+    overflow-x: scroll;
+  }
+
+  .main__dayClothes {
+    width: 300px;
+    height: 400px;
+  }
+  .main__dayClothes img {
+    width: 300px;
+    height: 400px;
+  }
+
+  /* footer */
+  footer {
+    height: 15vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  footer p {
+    font-size: var(--font-micro);
+    padding: 5px;
+  }
+  .float-end {
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    margin: 5px;
+    font-size: var(--font-large);
+  }
 }

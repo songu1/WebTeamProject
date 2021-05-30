@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/css/login.css" />
+    <%- include('layouts/head'); -%>
+  </head>
+  <body>
+    <%- include('layouts/header'); -%>
+    <main>
+      <section class="main__login-section">
+        <div class="main__section-title">로그인</div>
+        <form action="user/login" method="POST" class="main__login-wrapper">
+          <div class="control-group">
+            <div class="form-group">
+              <label>ID</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="ID를 입력하세요"
+                id="userId"
+                name="userId"
+              />
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group">
+              <label>비밀번호</label>
+              <input
+                type="password"
+                class="form-control"
+                placeholder="비밀번호를 입력하세요"
+                id="password"
+                name="password"
+              />
+            </div>
+          </div>
+          <div class="form-group btn">
+            <button
+              type="submit"
+              class="btn btn-primary"
+              id="sendMessageButton"
+            >
+              로그인
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <%- include('layouts/footer'); -%>
+  </body>
+</html>
