@@ -1,5 +1,6 @@
 <header>
   <div class="header__loginJoin-wrapper">
+    <% if(!loggedIn) {%>
     <div class="header__login header__loginJoin">
       <a href="/login">로그인</a>
     </div>
@@ -7,6 +8,15 @@
     <div class="header__join header__loginJoin">
       <a href="/register">회원가입</a>
     </div>
+    <% } %> <% if(loggedIn) { %>
+    <div class="header__login header__loginJoin">
+      <a href="/mypage">마이페이지</a>
+    </div>
+    <div class="header__loginJoin">|</div>
+    <div class="header__join header__loginJoin">
+      <a href="/logout">로그아웃</a>
+    </div>
+    <% } %>
   </div>
   <div class="header__title">
     <a href="/">오늘 뭐 입지?</a>

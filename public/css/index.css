@@ -28,7 +28,7 @@
   --animation-duration: 300ms;
 
   /* width */
-  --main-section-width: 80vw;
+  --main-section-width: 85vw;
 }
 
 /* font */
@@ -149,11 +149,16 @@ a {
 }
 
 .header__title {
-  height: 35vh;
+  height: 45vh;
+  width: 85vw;
+  margin: 50px auto;
   line-height: 35vh;
   font-family: 'Chosunilbo_myungjo';
   text-align: center;
   font-size: var(--font-largest);
+  background-image: url(../img/background2.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
   /* margin: 50px 0px; */
 }
 
@@ -188,7 +193,7 @@ main {
   padding: 10px 50px;
   background-color: var(--color-white-blur);
   color: var(--color-dark-gray);
-  border-radius: 3px;
+  border: 1px solid black;
 }
 
 /* All Day */
@@ -227,12 +232,12 @@ main {
   margin: 5px 0;
 }
 .main__dayClothes-wrapper {
-  /* display: flex;
-  justify-content: space-between; */
-  display: grid;
+  display: flex;
+  justify-content: space-between;
+  /* display: grid;
   grid-template-columns: repeat(3, 1fr);
   row-gap: 20px;
-  column-gap: 50px;
+  column-gap: 50px; */
 }
 .main__dayClothes {
   width: 300px;
@@ -292,6 +297,28 @@ main {
 .main__theDayAfterTomorrowClothes-wrapper {
 }
 .main__theDayAfterTomorrowClothes {
+}
+
+.decoLineUp {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  left: -50px;
+  transform: rotate(-5deg);
+  height: 1px;
+  border-top: 1px solid black;
+  width: var(--main-section-width);
+}
+
+.decoLineDown {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  left: -50px;
+  transform: rotate(4deg);
+  height: 1px;
+  border-top: 1px solid black;
+  width: var(--main-section-width);
 }
 
 /* footer */
