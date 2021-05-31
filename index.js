@@ -69,9 +69,13 @@ app.post(
   storeUserController
 );
 
-app.post("/user/login", redirectIfAuthenticateMiddleware, loginUserController);
-
 app.post("/posts/store", storePostController);
+
+app.get("/mypage", (req, res) => {
+  res.render("mypage");
+});
+
+app.post("/user/login", redirectIfAuthenticateMiddleware, loginUserController);
 
 app.post("/register/newUser", async (req, res) => {
   console.log(req.body);

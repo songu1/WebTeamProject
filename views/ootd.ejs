@@ -21,9 +21,11 @@
     </nav>
 
     <section class="section__write-ootd">
+      <% if(loggedIn) { %>
       <button class="write-ootd-button">
         <a href="/write">작성하기</a>
       </button>
+      <% } %>
     </section>
     <main>
       <section class="main__ootd-section">
@@ -31,19 +33,14 @@
         <div class="main__ootd-contents">
           <% for(var i = 0; i < ootdposts.length; i++) { %>
           <div class="main__ootd-content">
-            <img
-              src=" <%= ootdposts[i].image %>"
-              alt="이미지"
-             />
+            <img src=" <%= ootdposts[i].image %>" alt="이미지" />
             <div class="main__ootd-content-description">
-              <h2>
-                <%= ootdposts[i].title %>
-              </h2>
-              <br><br>
+              <h2><%= ootdposts[i].title %></h2>
+              <br /><br />
               <%= ootdposts[i].body %>
             </div>
           </div>
-          <% } %>  
+          <% } %>
         </div>
       </section>
     </main>
