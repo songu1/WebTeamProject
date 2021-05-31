@@ -5,7 +5,21 @@
     <%- include('layouts/head'); -%>
   </head>
   <body>
-    <%- include('layouts/header'); -%> <%- include('layouts/navbar'); -%>
+    <%- include('layouts/header'); -%>
+    <nav>
+      <div class="nav__menu-wrapper">
+        <ul class="nav__menus">
+          <li class="nav__menu menuBorder">
+            <a href="/">오늘의 날씨</a>
+          </li>
+          <li class="nav__menu">|</li>
+          <li class="nav__menu menuBorder selected">
+            <a href="/ootd">OOTD</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
     <section class="section__write-ootd">
       <button class="write-ootd-button">
         <a href="/write">작성하기</a>

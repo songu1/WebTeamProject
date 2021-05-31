@@ -8,13 +8,23 @@ module.exports = (req, res) => {
     if (user) {
       bcrypt.compare(password, user.password, (err, same) => {
         if (same) {
+          req.session.userId = user._id;
+
           res.redirect('/');
         } else {
-          res.redirect('/login');
+          res.send(
+            `<script type="text/javascript">alert("비밀번호가 틀립니다");
+            window.location.href="/login";</script>`
+          );
+          // res.redirect('/login');
         }
       });
     } else {
-      res.redirect('/login');
+      res.send(
+        `<script type="text/javascript">alert("아이디가 존재하지 않습니다");
+        window.location.href="/login";</script>`
+      );
+      // res.redirect('/login');
     }
   });
 };

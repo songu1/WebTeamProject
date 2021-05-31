@@ -6,7 +6,18 @@
   </head>
 
   <body>
-    <%- include('layouts/header'); -%> <%- include('layouts/navbar'); -%>
+    <%- include('layouts/header'); -%>
+    <nav>
+      <div class="nav__menu-wrapper">
+        <ul class="nav__menus">
+          <li class="nav__menu menuBorder selected">
+            <a href="/">오늘의 날씨</a>
+          </li>
+          <li class="nav__menu">|</li>
+          <li class="nav__menu menuBorder"><a href="/ootd">OOTD</a></li>
+        </ul>
+      </div>
+    </nav>
     <main>
       <section class="main__weather-section">
         <div class="main__today-wrapper main__day-wrapper">
@@ -37,10 +48,7 @@
           <div class="main__todayClothes-wrapper main__dayClothes-wrapper">
             <div class="main__todayClothes main__dayClothes clothes1"></div>
             <div class="main__todayClothes main__dayClothes clothes2">
-              <img
-                src="https://image.msscdn.net/images/goods_img/20180424/763134/763134_4_500.jpg"
-                alt=""
-              />
+              <img src="<%= clothes[1].url %>" alt="" />
             </div>
             <div class="main__todayClothes main__dayClothes clothes3">
               <img
@@ -50,6 +58,7 @@
             </div>
           </div>
         </div>
+        <div class="decoLineUp"></div>
         <div class="main__tomorrow-wrapper main__day-wrapper">
           <div class="main__tomorrowInfo main__dayInfo">
             <div class="main__tomorrow-date-wrapper main__date-wrapper">
@@ -99,6 +108,7 @@
             </div>
           </div>
         </div>
+        <div class="decoLineDown"></div>
         <div class="main__theDayAfterTomorrow-wrapper main__day-wrapper">
           <div class="main__theDayAfterTomorrowInfo main__dayInfo">
             <div

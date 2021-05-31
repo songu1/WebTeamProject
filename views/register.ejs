@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="/css/register.css" />
+
     <%- include('layouts/head'); -%>
   </head>
   <body>
@@ -13,6 +14,7 @@
           action="/register/newUser"
           method="POST"
           class="main__register-wrapper"
+          id="register"
         >
           <div class="control-group">
             <div class="form-group">
@@ -50,19 +52,46 @@
               />
             </div>
           </div>
-
-          <div class="form-group btn">
-            <button
-              type="submit"
-              class="btn btn-primary"
-              id="sendMessageButton"
-            >
-              확인
-            </button>
-          </div>
         </form>
+        <div class="form-group btn" id="sendMessageButtonForm">
+          <button
+            onclick="register()"
+            class="btn btn-primary"
+            id="sendMessageButton"
+          >
+            확인
+          </button>
+        </div>
       </section>
     </main>
     <%- include('layouts/footer'); -%>
+    <script>
+      function register() {
+        const email_input = document.querySelector('#userId');
+        const password_input = document.querySelector('#password');
+        const password_check_input = document.querySelector('#passwordCheck');
+
+        if (!email_input.value) {
+          alert('이메일을 입력하시오');
+          return;
+        }
+        if (!password_input.value) {
+          alert('비밀번호를 입력하시오');
+          return;
+        }
+        if (!password_check_input.value) {
+          alert('비밀번호 확인을 입력하시오');
+          return;
+        }
+
+        if (password_input.value !== password_check_input.value) {
+          alert('비밀번호를 다시 확인하시오');
+          return;
+        }
+
+        const form = document.querySelector('#register');
+        form.submit();
+      }
+    </script>
   </body>
 </html>
