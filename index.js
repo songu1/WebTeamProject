@@ -71,8 +71,13 @@ app.post(
 
 app.post("/posts/store", storePostController);
 
-app.get("/mypage", (req, res) => {
-  res.render("mypage");
+app.get("/mypage", async (req, res) => {
+  const userId = req.session.userId;
+  const user = await User.findById(userId).populate("posts");
+  console.log(user);
+  const posts = user.posts;
+
+  res.render("mypage", { posts });
 });
 
 app.post("/user/login", redirectIfAuthenticateMiddleware, loginUserController);
