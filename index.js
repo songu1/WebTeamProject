@@ -67,6 +67,10 @@ app.post(
   storeUserController
 );
 
+app.get('/mypage', (req, res) => {
+  res.render('mypage');
+});
+
 app.post('/user/login', redirectIfAuthenticateMiddleware, loginUserController);
 
 app.get('/logout', logoutController);
