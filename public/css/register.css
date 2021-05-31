@@ -239,6 +239,10 @@ footer {
   justify-content: space-between;
 }
 
+.float-end {
+  display: none;
+}
+
 /* @@@ Mobile @@@ */
 
 @media screen and (max-width: 850px) {
@@ -319,12 +323,5 @@ footer {
   footer p {
     font-size: var(--font-micro);
     padding: 5px;
-  }
-  .float-end {
-    position: fixed;
-    bottom: 5px;
-    right: 5px;
-    margin: 5px;
-    font-size: var(--font-large);
   }
 }

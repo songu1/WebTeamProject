@@ -329,6 +329,14 @@ footer {
   justify-content: space-between;
 }
 
+.float-end {
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  margin: 5px;
+  font-size: var(--font-large);
+}
+
 /* @@@ Mobile @@@ */
 
 @media screen and (max-width: 1200px) {
@@ -420,6 +428,28 @@ footer {
     height: 400px;
   }
 
+  .decoLineUp {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    left: 0px;
+    transform: rotate(-5deg);
+    height: 1px;
+    border-top: 1px solid black;
+    width: var(--main-section-width);
+  }
+
+  .decoLineDown {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    left: 0px;
+    transform: rotate(4deg);
+    height: 1px;
+    border-top: 1px solid black;
+    width: var(--main-section-width);
+  }
+
   /* footer */
   footer {
     height: 15vh;
@@ -430,12 +460,5 @@ footer {
   footer p {
     font-size: var(--font-micro);
     padding: 5px;
-  }
-  .float-end {
-    position: fixed;
-    bottom: 5px;
-    right: 5px;
-    margin: 5px;
-    font-size: var(--font-large);
   }
 }

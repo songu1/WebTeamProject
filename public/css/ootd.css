@@ -267,7 +267,7 @@ button {
   line-height: 30px;
   text-align: center;
 }
-.main__ootd-content-description h2{
+.main__ootd-content-description h2 {
   line-height: 50px;
 }
 .main__ootd-content:hover .main__ootd-content-description {
@@ -280,6 +280,14 @@ footer {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+}
+
+.float-end {
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  margin: 5px;
+  font-size: var(--font-large);
 }
 
 /* @@@ Mobile @@@ */
@@ -352,12 +360,5 @@ footer {
   footer p {
     font-size: var(--font-micro);
     padding: 5px;
-  }
-  .float-end {
-    position: fixed;
-    bottom: 5px;
-    right: 5px;
-    margin: 5px;
-    font-size: var(--font-large);
   }
 }
