@@ -251,22 +251,25 @@ main {
   height: 380px;
 }
 .main__ootd-content img {
-  width: 100%;
-  height: 100%;
+  width: 280px;
+  height: 380px;
 }
 
 .main__ootd-content-description {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 280px;
+  height: 380px;
   background-color: var(--color-gray-blur);
   color: var(--color-white);
   transition: all 300ms ease-in;
   opacity: 0;
-  line-height: 380px;
+  line-height: 30px;
   text-align: center;
+}
+.main__ootd-content-description h2{
+  line-height: 50px;
 }
 .main__ootd-content:hover .main__ootd-content-description {
   opacity: 0.8;
