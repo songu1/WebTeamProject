@@ -23,24 +23,30 @@
         <div class="main__today-wrapper main__day-wrapper">
           <div class="main__todayInfo main__dayInfo">
             <div class="main__today-date-wrapper main__date-wrapper">
-              <div class="main__today-date main__day-date">2021-05-17</div>
-              <div class="main__today-day main__day-day">(월)</div>
+              <div class="main__today-date main__day-date" id="date0">
+                날짜를 불러오고 있습니다.
+              </div>
+              <div class="main__today-day main__day-day" id="day0"></div>
             </div>
             <div class="main__today-weather-wrapper main__weather-wrapper">
-              <div class="main__today-location main__day-location">대구</div>
-              <div class="main__today-temperature main__day-temperature">
-                30도
+              <div class="main__today-location main__day-location" name="city">
+                위치를 불러오고 있습니다...
               </div>
-              <div class="main__today-weather main__day-weather">맑음</div>
+              <div
+                class="main__today-temperature main__day-temperature"
+                id="temp0"
+              ></div>
+              <div
+                class="main__today-weather main__day-weather"
+                id="weather0"
+              ></div>
             </div>
           </div>
           <div class="main__clothesExample">
             28℃~ 반팔, 반바지, 민소매, 샌들
           </div>
           <div class="main__todayClothes-wrapper main__dayClothes-wrapper">
-            <div class="main__todayClothes main__dayClothes clothes1">
-              <img src="<%= clothes[0].url %>" alt="" />
-            </div>
+            <div class="main__todayClothes main__dayClothes clothes1"></div>
             <div class="main__todayClothes main__dayClothes clothes2">
               <img src="<%= clothes[1].url %>" alt="" />
             </div>
@@ -56,15 +62,26 @@
         <div class="main__tomorrow-wrapper main__day-wrapper">
           <div class="main__tomorrowInfo main__dayInfo">
             <div class="main__tomorrow-date-wrapper main__date-wrapper">
-              <div class="main__tomorrow-date main__day-date">2021-05-18</div>
-              <div class="main__tomorrow-day main__day-day">(화)</div>
+              <div class="main__tomorrow-date main__day-date" id="date1">
+                날짜를 불러오고 있습니다.
+              </div>
+              <div class="main__tomorrow-day main__day-day" id="day1"></div>
             </div>
             <div class="main__tomorrow-weather-wrapper main__weather-wrapper">
-              <div class="main__tomorrow-location main__day-location">대구</div>
-              <div class="main__tomorrow-temperature main__day-temperature">
-                30도
+              <div
+                class="main__tomorrow-location main__day-location"
+                name="city"
+              >
+                위치를 불러오고 있습니다...
               </div>
-              <div class="main__tomorrow-weather main__day-weather">맑음</div>
+              <div
+                class="main__tomorrow-temperature main__day-temperature"
+                id="temp1"
+              ></div>
+              <div
+                class="main__tomorrow-weather main__day-weather"
+                id="weather1"
+              ></div>
             </div>
           </div>
           <div class="main__clothesExample">
@@ -97,12 +114,16 @@
             <div
               class="main__theDayAfterTomorrow-date-wrapper main__date-wrapper"
             >
-              <div class="main__theDayAfterTomorrow-date main__day-date">
-                2021-05-19
+              <div
+                class="main__theDayAfterTomorrow-date main__day-date"
+                id="date2"
+              >
+                날짜를 불러오고 있습니다.
               </div>
-              <div class="main__theDayAfterTomorrow-day main__day-day">
-                (수)
-              </div>
+              <div
+                class="main__theDayAfterTomorrow-day main__day-day"
+                id="day2"
+              ></div>
             </div>
             <div
               class="
@@ -111,19 +132,20 @@
             >
               <div
                 class="main__theDayAfterTomorrow-location main__day-location"
+                name="city"
               >
-                대구
+                위치를 불러오고 있습니다...
               </div>
               <div
                 class="
                   main__theDayAfterTomorrow-temperature main__day-temperature
                 "
-              >
-                30도
-              </div>
-              <div class="main__theDayAfterTomorrow-weathe main__day-weather">
-                맑음
-              </div>
+                id="temp2"
+              ></div>
+              <div
+                class="main__theDayAfterTomorrow-weathe main__day-weather"
+                id="weather2"
+              ></div>
             </div>
           </div>
           <div class="main__clothesExample">
@@ -156,6 +178,8 @@
         </div>
       </section>
     </main>
+    <footer></footer>
+    <script type="text/javascript" src="/js/index.js"></script>
     <%- include('layouts/footer'); -%>
   </body>
 </html>

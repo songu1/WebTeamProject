@@ -29,48 +29,21 @@
       <section class="main__ootd-section">
         <div class="main__ootd-title"></div>
         <div class="main__ootd-contents">
+          <% for(var i = 0; i < ootdposts.length; i++) { %>
           <div class="main__ootd-content">
             <img
-              src="https://image.musinsa.com/mfile_s01/_shopstaff/250.staff_609e3c3898066.jpg?20210514183609"
-              alt=""
-            />
-            <div class="main__ootd-content-description">여름|반팔</div>
+              src=" <%= ootdposts[i].image %>"
+              alt="이미지"
+             />
+            <div class="main__ootd-content-description">
+              <h2>
+                <%= ootdposts[i].title %>
+              </h2>
+              <br><br>
+              <%= ootdposts[i].body %>
+            </div>
           </div>
-          <div class="main__ootd-content">
-            <img
-              src="https://image.musinsa.com/mfile_s01/_shopstaff/250.staff_609e3c3898066.jpg?20210514183609"
-              alt=""
-            />
-            <div class="main__ootd-content-description">여름|반팔</div>
-          </div>
-          <div class="main__ootd-content">
-            <img
-              src="https://image.musinsa.com/mfile_s01/_shopstaff/250.staff_609e3c3898066.jpg?20210514183609"
-              alt=""
-            />
-            <div class="main__ootd-content-description">여름|반팔</div>
-          </div>
-          <div class="main__ootd-content">
-            <img
-              src="https://image.musinsa.com/mfile_s01/_shopstaff/250.staff_609e3c3898066.jpg?20210514183609"
-              alt=""
-            />
-            <div class="main__ootd-content-description">여름|반팔</div>
-          </div>
-          <div class="main__ootd-content">
-            <img
-              src="https://image.musinsa.com/mfile_s01/_shopstaff/250.staff_609e3c3898066.jpg?20210514183609"
-              alt=""
-            />
-            <div class="main__ootd-content-description">여름|반팔</div>
-          </div>
-          <div class="main__ootd-content">
-            <img
-              src="https://image.musinsa.com/mfile_s01/_shopstaff/250.staff_609e3c3898066.jpg?20210514183609"
-              alt=""
-            />
-            <div class="main__ootd-content-description">여름|반팔</div>
-          </div>
+          <% } %>  
         </div>
       </section>
     </main>
