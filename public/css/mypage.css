@@ -33,75 +33,75 @@
 
 /* font */
 @font-face {
-  font-family: 'Cafe24Dangdanghae';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.2/Cafe24Dangdanghae.woff')
-    format('woff');
+  font-family: "Cafe24Dangdanghae";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.2/Cafe24Dangdanghae.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Wemakeprice-Bold';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/Wemakeprice-Bold.woff')
-    format('woff');
+  font-family: "Wemakeprice-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/Wemakeprice-Bold.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'NEXON Lv1 Gothic OTF';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff')
-    format('woff');
+  font-family: "NEXON Lv1 Gothic OTF";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'NanumBarunGothic';
+  font-family: "NanumBarunGothic";
   font-style: normal;
   font-weight: 400;
-  src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
-  src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix')
-      format('embedded-opentype'),
-    url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff')
-      format('woff'),
-    url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf')
-      format('truetype');
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot");
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix")
+      format("embedded-opentype"),
+    url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff")
+      format("woff"),
+    url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf")
+      format("truetype");
 }
 
 @font-face {
-  font-family: 'NanumBarunGothic';
+  font-family: "NanumBarunGothic";
   font-style: normal;
   font-weight: 700;
-  src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot');
-  src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot?#iefix')
-      format('embedded-opentype'),
-    url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff')
-      format('woff'),
-    url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.ttf')
-      format('truetype');
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot");
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff")
+      format("woff"),
+    url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.ttf")
+      format("truetype");
 }
 
 @font-face {
-  font-family: 'NanumBarunGothic';
+  font-family: "NanumBarunGothic";
   font-style: normal;
   font-weight: 300;
-  src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot');
-  src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix')
-      format('embedded-opentype'),
-    url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff')
-      format('woff'),
-    url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf')
-      format('truetype');
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot");
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix")
+      format("embedded-opentype"),
+    url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff")
+      format("woff"),
+    url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf")
+      format("truetype");
 }
 
 @font-face {
-  font-family: 'Chosunilbo_myungjo';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff')
-    format('woff');
+  font-family: "Chosunilbo_myungjo";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 .nanumbarungothic * {
-  font-family: 'NanumBarunGothic', sans-serif;
+  font-family: "NanumBarunGothic", sans-serif;
 }
 
 * {
@@ -153,7 +153,7 @@ a {
   width: 85vw;
   margin: 50px auto;
   line-height: 35vh;
-  font-family: 'Chosunilbo_myungjo';
+  font-family: "Chosunilbo_myungjo";
   text-align: center;
   font-size: var(--font-largest);
   background-image: url(../img/background2.jpg);
@@ -184,14 +184,14 @@ a {
 }
 
 .main__myPage-lists {
-  width: var(--main-section-width);
+  width: calc(var(--main-section-width) - 100px);
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 }
 .main__myPage-list {
-  margin: 50px 0;
+  margin: 50px 30px;
 }
 
 .main__myPage-list img {
