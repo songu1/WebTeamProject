@@ -11,6 +11,12 @@ const bcrypt = require("bcrypt");
 const UserSchema = new Schema({
   userId: { type: String, required: true, unique: true },
   password: { type: String, required: true },
+  posts: [
+    {
+      type: mongoose.Types.ObjectId,
+      ref: "Post",
+    },
+  ],
 });
 
 UserSchema.pre("save", function (next) {
