@@ -299,28 +299,6 @@ main {
 .main__theDayAfterTomorrowClothes {
 }
 
-.decoLineUp {
-  position: relative;
-  margin: 0;
-  padding: 0;
-  left: -50px;
-  transform: rotate(-5deg);
-  height: 1px;
-  border-top: 1px solid black;
-  width: var(--main-section-width);
-}
-
-.decoLineDown {
-  position: relative;
-  margin: 0;
-  padding: 0;
-  left: -50px;
-  transform: rotate(4deg);
-  height: 1px;
-  border-top: 1px solid black;
-  width: var(--main-section-width);
-}
-
 /* footer */
 footer {
   height: 30vh;

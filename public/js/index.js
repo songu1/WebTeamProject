@@ -1,4 +1,4 @@
-const APIKEY = "2bfdff62d10ac09bcbd6648dcb41e523";
+const APIKEY = '2bfdff62d10ac09bcbd6648dcb41e523';
 
 const getWeather = () => {
   fetch(APICALL)
@@ -22,7 +22,7 @@ const getLocation = () => {
         return response.json();
       })
       .then(function (myJson) {
-        const city = document.getElementsByName("city");
+        const city = document.getElementsByName('city');
         const cityName = myJson[0].name;
         city[0].innerHTML = cityName;
         city[1].innerHTML = cityName;
@@ -34,27 +34,46 @@ const getLocation = () => {
       })
       .then(function (myJson) {
         for (let i = 0; i < 3; i++) {
-          const date = document.getElementById("date" + i);
-          const day = document.getElementById("day" + i);
-          const temp = document.getElementById("temp" + i);
-          const weather = document.getElementById("weather" + i);
+          const date = document.getElementById('date' + i);
+          const day = document.getElementById('day' + i);
+          const temp = document.getElementById('temp' + i);
+          const weather = document.getElementById('weather' + i);
 
           const timestamp = myJson.daily[i].dt * 1000;
           const tempDate = new Date(timestamp);
 
           date.innerText =
             tempDate.getFullYear() +
-            "-" +
+            '-' +
             (tempDate.getMonth() + 1) +
-            "-" +
+            '-' +
             tempDate.getDate();
-          day.innerText = tempDate.getDay();
+          day.innerText = dayNumToKorean(tempDate.getDay());
           temp.innerText = myJson.daily[i].temp.day;
           weather.innerText = myJson.daily[i].weather[0].main;
         }
       });
   });
 };
+
+function dayNumToKorean(dayNum) {
+  switch (dayNum) {
+    case 1:
+      return '월';
+    case 2:
+      return '화';
+    case 3:
+      return '수';
+    case 4:
+      return '목';
+    case 5:
+      return '금';
+    case 6:
+      return '토';
+    case 7:
+      return '일';
+  }
+}
 
 const init = () => {
   getLocation();
