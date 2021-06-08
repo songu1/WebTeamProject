@@ -30,6 +30,7 @@
 
   /* width */
   --main-section-width: 80vw;
+  --mobile-main-section-width: 95vw;
 }
 
 /* font */
@@ -160,7 +161,7 @@ button {
   font-family: 'Chosunilbo_myungjo';
   text-align: center;
   font-size: var(--font-largest);
-  /* margin: 50px 0px; */
+  margin: 50px 0px;
 }
 
 /* Navbar */
@@ -325,7 +326,7 @@ footer {
 
   /* Main */
   main {
-    width: var(--main-section-width);
+    width: 100vw;
     padding: 0;
     margin: auto;
     background-color: var(--color-white);
@@ -334,6 +335,7 @@ footer {
   }
 
   .main__ootd-section {
+    width: var(--mobile-main-section-width);
     display: flex;
     flex-direction: column;
     justify-content: center;

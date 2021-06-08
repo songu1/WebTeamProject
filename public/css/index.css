@@ -29,6 +29,7 @@
 
   /* width */
   --main-section-width: 85vw;
+  --mobile-main-section-width: 95vw;
 }
 
 /* font */
@@ -111,13 +112,6 @@
 body {
   font-family: Chosunilbo_myungjo;
   background-color: var(--color-white);
-  /* background: rgb(64, 64, 64);
-  background: linear-gradient(
-    32deg,
-    rgba(64, 64, 64, 1) 0%,
-    rgba(100, 100, 163, 1) 59%,
-    rgba(207, 171, 221, 1) 100%
-  ); */
   color: var(--color-black);
 }
 
@@ -156,10 +150,37 @@ a {
   font-family: 'Chosunilbo_myungjo';
   text-align: center;
   font-size: var(--font-largest);
-  background-image: url(../img/background2.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  /* margin: 50px 0px; */
+}
+
+.header__nav-menu {
+  position: relative;
+  transform: translateY(60px);
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  display: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header__nav-menu.open {
+  display: block;
+}
+
+.header__loginJoin-wrapper.mobile {
+  display: flex;
+  justify-content: center;
+}
+
+.header__nav-toggle-btn {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 16px;
+  border: none;
+  color: var(--color-gray-blur);
+  background-color: var(--color-white);
+  font-size: var(--font-medium);
 }
 
 /* Navbar */
@@ -242,6 +263,9 @@ main {
 .main__dayClothes {
   width: 300px;
   height: 400px;
+  text-align: center;
+  line-height: 400px;
+  background-color: white;
 }
 .main__dayClothes img {
   width: 300px;
@@ -335,6 +359,33 @@ footer {
     /* margin: 50px 0px; */
   }
 
+  .header__loginJoin.pc {
+    display: none;
+  }
+
+  .header__loginJoin-wrapper.mobile {
+    display: flex;
+    justify-content: center;
+  }
+
+  .header__nav-toggle-btn {
+    display: block;
+  }
+
+  .header__nav-menu {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    display: none;
+  }
+
+  .header__nav-menu.open {
+    display: block;
+  }
+  li.header__loginJoin {
+    text-align: right;
+  }
+
   /* Navbar */
   .nav__menu-wrapper {
     margin-bottom: 30px;
@@ -346,7 +397,7 @@ footer {
 
   /* Main */
   main {
-    width: var(--main-section-width);
+    width: var(--mobile-main-section-width);
     padding: 0;
     margin: auto;
     background-color: var(--color-white-blur);
@@ -359,6 +410,7 @@ footer {
     display: flex;
     flex-direction: column;
     margin: 70px 0;
+    padding: 0 20px;
   }
   .main__dayInfo {
     display: flex;
@@ -404,28 +456,6 @@ footer {
   .main__dayClothes img {
     width: 300px;
     height: 400px;
-  }
-
-  .decoLineUp {
-    position: relative;
-    margin: 0;
-    padding: 0;
-    left: 0px;
-    transform: rotate(-5deg);
-    height: 1px;
-    border-top: 1px solid black;
-    width: var(--main-section-width);
-  }
-
-  .decoLineDown {
-    position: relative;
-    margin: 0;
-    padding: 0;
-    left: 0px;
-    transform: rotate(4deg);
-    height: 1px;
-    border-top: 1px solid black;
-    width: var(--main-section-width);
   }
 
   /* footer */
