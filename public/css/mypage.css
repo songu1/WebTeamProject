@@ -29,6 +29,7 @@
 
   /* width */
   --main-section-width: 85vw;
+  --mobile-main-section-width: 95vw;
 }
 
 /* font */
@@ -111,13 +112,6 @@
 body {
   font-family: Chosunilbo_myungjo;
   background-color: var(--color-white);
-  /* background: rgb(64, 64, 64);
-    background: linear-gradient(
-      32deg,
-      rgba(64, 64, 64, 1) 0%,
-      rgba(100, 100, 163, 1) 59%,
-      rgba(207, 171, 221, 1) 100%
-    ); */
   color: var(--color-black);
 }
 
@@ -156,21 +150,23 @@ a {
   font-family: 'Chosunilbo_myungjo';
   text-align: center;
   font-size: var(--font-largest);
-  background-image: url(../img/background2.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
+
   /* margin: 50px 0px; */
 }
 
 .myPage-title {
   width: var(--main-section-width);
-  margin: 70px auto;
+  margin: 50px auto;
   font-size: var(--font-large);
 }
 
 /* Main */
 .main__myPage-section {
   width: var(--main-section-width);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   min-height: 50vh;
   margin: auto;
   padding: 50px 50px;
@@ -178,17 +174,19 @@ a {
   color: var(--color-dark-gray);
   border: 1px solid black;
 }
+.main__myPage-section:first-child {
+  align-items: flex-start;
+  justify-content: flex-start;
+}
 
 .main__myPage-list-title {
   font-size: var(--font-medium);
 }
 
 .main__myPage-lists {
-  width: calc(var(--main-section-width) - 100px);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
 }
 .main__myPage-list {
   margin: 50px 30px;
@@ -221,9 +219,20 @@ a {
 }
 .main__myPage-content-description h2 {
   line-height: 50px;
+  margin: 80px auto;
 }
 .main__myPage-content:hover .main__myPage-content-description {
   opacity: 0.8;
+}
+
+.deleteBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background-color: #ffffff00;
+  font-size: var(--font-medium);
+  color: var(--color-white);
 }
 
 /* footer */
@@ -262,14 +271,31 @@ footer {
     /* margin: 50px 0px; */
   }
 
+  .myPage-title {
+    font-size: var(--font-medium);
+    margin: 30px auto;
+  }
+
+  .main__myPage-list-title {
+    font-size: var(--font-regular);
+  }
+
   /* Main */
   main {
-    width: var(--main-section-width);
+    width: 100vw;
     padding: 0;
     margin: auto;
     background-color: var(--color-white-blur);
     color: var(--color-dark-gray);
     border-radius: 3px;
+  }
+
+  .main__myPage-section {
+    width: var(--mobile-main-section-width);
+  }
+
+  .main__myPage-lists {
+    width: var(--mobile-main-section-width);
   }
 
   /* footer */

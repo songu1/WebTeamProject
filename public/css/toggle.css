@@ -28,7 +28,8 @@
   --animation-duration: 300ms;
 
   /* width */
-  --main-section-width: 80vw;
+  --main-section-width: 85vw;
+  --mobile-main-section-width: 95vw;
 }
 
 /* font */
@@ -111,13 +112,6 @@
 body {
   font-family: Chosunilbo_myungjo;
   background-color: var(--color-white);
-  /* background: rgb(64, 64, 64);
-      background: linear-gradient(
-        32deg,
-        rgba(64, 64, 64, 1) 0%,
-        rgba(100, 100, 163, 1) 59%,
-        rgba(207, 171, 221, 1) 100%
-      ); */
   color: var(--color-black);
 }
 
@@ -130,198 +124,62 @@ a {
   color: var(--color-black);
 }
 
-input {
-  outline: none;
-  border: none;
-}
-
-input[placeholder] {
-  text-align: center;
-}
-
-textarea {
-  outline: none;
-  border: none;
-}
-
-/* Header */
-
-.header__loginJoin-wrapper {
-  display: flex;
-  justify-content: flex-end;
-  margin: 5px 15px;
-}
-.header__loginJoin {
-  padding: 10px 10px;
-  font-family: NanumBarunGothic;
-  border: 1px solid var(--color-white);
-}
-
-.header__login:hover,
-.header__join:hover {
-  border: 1px solid var(--color-black);
-}
-.header__title {
-  height: 35vh;
-  line-height: 35vh;
-  font-family: 'Chosunilbo_myungjo';
-  text-align: center;
-  font-size: var(--font-largest);
-  margin: 50px 0px;
-}
-
-/* Main */
-main {
-  width: var(--main-section-width);
-  margin: auto;
-  padding: 10px 50px;
-  background-color: var(--color-white-blur);
-  color: var(--color-dark-gray);
-  border-radius: 3px;
-}
-
-.main__register-section {
-  display: flex;
+.header__nav-menu {
+  position: relative;
+  transform: translateY(60px);
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.main__section-title {
-  font-size: var(--font-large);
-  margin: 30px;
-}
-
-.control-group {
-  width: 35vw;
-}
-
-.form-group {
-  display: flex;
-  justify-content: space-between;
-}
-
-.form-group label,
-.form-group input {
-  height: 40px;
-  margin: 5px;
-  line-height: 40px;
-}
-
-.form-group.btn {
-  justify-content: center;
-}
-
-.form-group .btn {
-  border: 1px solid var(--color-black);
-  background-color: var(--color-white-blur);
-  padding: 5px 10px;
-  margin: 20px;
-}
-
-.form-group .btn:hover {
-  border: 1px solid var(--color-black);
-  background-color: var(--color-dark-gray);
-  color: var(--color-white);
-  padding: 5px 10px;
-  margin: 20px;
-}
-
-.form-control {
-  width: 20vw;
-}
-
-/* footer */
-footer {
-  height: 30vh;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-}
-
-.float-end {
+  width: 100%;
+  text-align: center;
   display: none;
+  padding: 0;
+  margin: 0;
 }
 
-/* @@@ Mobile @@@ */
+.header__nav-menu.open {
+  display: block;
+}
 
-@media screen and (max-width: 850px) {
-  /* Header */
+.header__loginJoin-wrapper.mobile {
+  display: flex;
+  justify-content: center;
+}
 
-  body {
-    margin: 0;
+.header__nav-toggle-btn {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 16px;
+  border: none;
+  color: var(--color-gray-blur);
+  background-color: var(--color-white);
+  font-size: var(--font-medium);
+}
+
+@media screen and (max-width: 1200px) {
+  .header__loginJoin.pc {
+    display: none;
   }
 
-  header {
-    width: 100vw;
-  }
-
-  .header__title {
-    height: 25vh;
-    line-height: 25vh;
-    font-size: var(--font-large);
-    /* margin: 50px 0px; */
-  }
-
-  /* Navbar */
-  .nav__menu-wrapper {
-    margin-bottom: 30px;
-  }
-
-  .nav__menu {
-    font-size: var(--font-regular);
-  }
-
-  /* Main */
-  main {
-    width: 100vw;
-    margin: auto;
-    padding: 0;
-  }
-
-  .main__register-section {
+  .header__loginJoin-wrapper.mobile {
     display: flex;
-    width: 100vw;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
   }
 
-  .main__section-title {
-    font-size: var(--font-medium);
-    margin: 30px;
+  .header__nav-toggle-btn {
+    display: block;
   }
 
-  .control-group {
-    width: 85vw;
-    margin: auto;
+  .header__nav-menu {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    display: none;
   }
 
-  .form-group {
-    display: flex;
-    justify-content: space-between;
+  .header__nav-menu.open {
+    display: block;
   }
-
-  .form-group label,
-  .form-group input {
-    height: 40px;
-    margin: 5px;
-    line-height: 40px;
-  }
-
-  .form-group input {
-    width: calc(100% - 120px);
-  }
-
-  /* footer */
-  footer {
-    height: 15vh;
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-  }
-  footer p {
-    font-size: var(--font-micro);
-    padding: 5px;
+  li.header__loginJoin {
+    text-align: right;
   }
 }

@@ -9,27 +9,36 @@
       <a href="/register">회원가입</a>
     </div>
     <ul class="header__nav-menu">
-      <li class="header__login header__loginJoin">로그인</li>
-      <li class="header__join header__loginJoin">회원가입</li>
+      <li class="header__login header__loginJoin">
+        <a href="/login">로그인</a>
+      </li>
+      <li class="header__join header__loginJoin">
+        <a href="/register">회원가입</a>
+      </li>
     </ul>
     <!-- Toggle button -->
     <button class="header__nav-toggle-btn">
       <i class="fas fa-bars"></i>
     </button>
     <% } %> <% if(loggedIn) { %>
-    <div class="header__login header__loginJoin">
+    <div class="header__login header__loginJoin pc">
       <a href="/mypage">마이페이지</a>
     </div>
-    <div class="header__loginJoin">|</div>
-    <div class="header__join header__loginJoin">
+    <div class="header__loginJoin pc">|</div>
+    <div class="header__join header__loginJoin pc">
       <a href="/logout">로그아웃</a>
     </div>
     <ul class="header__nav-menu">
-      <div class="header__loginJoin-wrapper mobile">
-        <div class="header__login header__loginJoin">마이페이지</div>
-        <div class="header__join header__loginJoin">로그아웃</div>
-      </div>
+      <li class="header__login header__loginJoin">
+        <a href="/mypage">마이페이지</a>
+      </li>
+      <li class="header__join header__loginJoin">
+        <a href="/logout">로그아웃</a>
+      </li>
     </ul>
+    <button class="header__nav-toggle-btn">
+      <i class="fas fa-bars"></i>
+    </button>
     <% } %>
   </div>
   <div class="header__title">

@@ -156,8 +156,8 @@ button {
 }
 
 .header__title {
-  height: 35vh;
-  line-height: 35vh;
+  height: 45vh;
+  line-height: 45vh;
   font-family: 'Chosunilbo_myungjo';
   text-align: center;
   font-size: var(--font-largest);
@@ -233,12 +233,6 @@ button {
 }
 
 .main__ootd-contents {
-  /* display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 40px;
-  row-gap: 20px;
-  justify-content: space-between; */
-  /* column-gap: 80px; */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -321,7 +315,8 @@ footer {
   }
 
   .section__write-ootd {
-    margin-bottom: 0;
+    width: var(--mobile-main-section-width);
+    margin-bottom: 10px;
   }
 
   /* Main */

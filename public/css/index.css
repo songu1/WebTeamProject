@@ -152,37 +152,6 @@ a {
   font-size: var(--font-largest);
 }
 
-.header__nav-menu {
-  position: relative;
-  transform: translateY(60px);
-  flex-direction: column;
-  width: 100%;
-  text-align: center;
-  display: none;
-  padding: 0;
-  margin: 0;
-}
-
-.header__nav-menu.open {
-  display: block;
-}
-
-.header__loginJoin-wrapper.mobile {
-  display: flex;
-  justify-content: center;
-}
-
-.header__nav-toggle-btn {
-  display: none;
-  position: absolute;
-  top: 20px;
-  right: 16px;
-  border: none;
-  color: var(--color-gray-blur);
-  background-color: var(--color-white);
-  font-size: var(--font-medium);
-}
-
 /* Navbar */
 .nav__menu-wrapper {
   margin-bottom: 60px;
@@ -357,33 +326,6 @@ footer {
     line-height: 25vh;
     font-size: var(--font-large);
     /* margin: 50px 0px; */
-  }
-
-  .header__loginJoin.pc {
-    display: none;
-  }
-
-  .header__loginJoin-wrapper.mobile {
-    display: flex;
-    justify-content: center;
-  }
-
-  .header__nav-toggle-btn {
-    display: block;
-  }
-
-  .header__nav-menu {
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    display: none;
-  }
-
-  .header__nav-menu.open {
-    display: block;
-  }
-  li.header__loginJoin {
-    text-align: right;
   }
 
   /* Navbar */

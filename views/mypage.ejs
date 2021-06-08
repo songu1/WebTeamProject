@@ -7,23 +7,30 @@
 
   <body>
     <%- include('layouts/header'); -%>
-    <div class="myPage-title">&lt;마이페이지&gt;</div>
+   
+    <div class="myPage-title"><a href="/">마이페이지</a></div>
     <main>
       <section class="main__myPage-section">
-        <div class="main__myPage-list-title">내가 올린 글</div>
+        <div class="main__myPage-list-title">작성글 관리</div>
         <div class="main__myPage-lists">
 
           <% for(let i=0; i<posts.length; i++){ %>
             <form action="/delete/<%-posts[i].id-%>" method="POST">
+
               <div class="main__myPage-list">
-                <img
-                  src=<%-posts[i].image-%>
-                  alt=""
-                />
-                
+                <div class="main__myPage-content">
+                  <img
+                  src=<%- posts[i].image -%>
+                  alt=""/>
+                  <div class="main__myPage-content-description">
+                    <h2><%= posts[i].title %></h2>
+                    <%= posts[i].body %>
+                    <button class="deleteBtn"type="submit">X</button>
+                  </div>
+                </div>
               </div>
-              <button type="submit"><i class="fas fa-trash-alt"></i></button>
-            </form>
+              
+              </form>
           <% } %>
           
         </div>

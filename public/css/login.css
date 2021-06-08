@@ -167,7 +167,7 @@ textarea {
   font-family: 'Chosunilbo_myungjo';
   text-align: center;
   font-size: var(--font-largest);
-  /* margin: 50px 0px; */
+  margin: 50px 0px;
 }
 
 /* Main */

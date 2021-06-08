@@ -1,6 +1,6 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const bcrypt = require("bcrypt");
+const bcrypt = require('bcrypt');
 
 // const UserSchema = new Schema({
 //   userId: String,
@@ -14,12 +14,12 @@ const UserSchema = new Schema({
   posts: [
     {
       type: mongoose.Types.ObjectId,
-      ref: "Post",
+      ref: 'Post',
     },
   ],
 });
 
-UserSchema.pre("save", function (next) {
+UserSchema.pre('save', function (next) {
   const user = this;
   bcrypt.hash(user.password, 10, (error, hash) => {
     user.password = hash;
@@ -27,5 +27,5 @@ UserSchema.pre("save", function (next) {
   });
 });
 
-const User = mongoose.model("User", UserSchema);
+const User = mongoose.model('User', UserSchema);
 module.exports = User;
