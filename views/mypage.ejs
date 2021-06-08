@@ -14,12 +14,16 @@
         <div class="main__myPage-lists">
 
           <% for(let i=0; i<posts.length; i++){ %>
-            <div class="main__myPage-list">
-              <img
-                src=<%-posts[i].image-%>
-                alt=""
-              />
-            </div>
+            <form action="/delete/<%-posts[i].id-%>" method="POST">
+              <div class="main__myPage-list">
+                <img
+                  src=<%-posts[i].image-%>
+                  alt=""
+                />
+                
+              </div>
+              <button type="submit"><i class="fas fa-trash-alt"></i></button>
+            </form>
           <% } %>
           
         </div>
