@@ -162,6 +162,7 @@ a {
 
 /* Main */
 .main__myPage-section {
+  position: relative;
   width: var(--main-section-width);
   display: flex;
   flex-direction: column;
@@ -169,27 +170,29 @@ a {
   align-items: center;
   min-height: 50vh;
   margin: auto;
-  padding: 50px 50px;
+  padding: 60px 0;
   background-color: var(--color-white-blur);
   color: var(--color-dark-gray);
   border: 1px solid black;
 }
-.main__myPage-section:first-child {
-  align-items: flex-start;
-  justify-content: flex-start;
-}
 
 .main__myPage-list-title {
+  position: absolute;
+  top: 50px;
+  left: 30px;
   font-size: var(--font-medium);
+  padding: 0 30px;
 }
 
 .main__myPage-lists {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
 }
+
 .main__myPage-list {
-  margin: 50px 30px;
+  margin: 0;
 }
 
 .main__myPage-content {

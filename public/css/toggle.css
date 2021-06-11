@@ -139,11 +139,6 @@ a {
   display: block;
 }
 
-.header__loginJoin-wrapper.mobile {
-  display: flex;
-  justify-content: center;
-}
-
 .header__nav-toggle-btn {
   display: none;
   position: absolute;
